@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="images/logoV.png" type="image/x-icon">
     <meta name="author" content="Remember">
     <meta name="copyright" content="Remember">
-    <meta name="description" content="Pantalla de inicio de la página de remember"> 
+    <meta name="description" content="Pantalla de inicio de la página de remember">
     <meta name="keywords" content="Pantalla Inicio, Notas, Remember">
 </head>
 
@@ -21,23 +21,25 @@
             <div class="imagen">
                 <img src="images/index/Logo.png" id="logo" alt="">
             </div>
-            <div class="formulario">
+            <div class="formulario" id="formulario-reg">
                 <form action="" class="flex-column" style="align-items: center;">
                     <div id="form-container">
                         <div class="flex-row">
-                            <input type="text" placeholder="Nombre(s)" required>
-                            <input type="text" placeholder="Apellido(s)" required>
+                            <input type="text" placeholder="Nombre(s)" id="name">
+                            <input type="text" placeholder="Apellido(s)" id="last-name">
                         </div>
                         <div class="flex-column">
-                            <input type="email" placeholder="Dirección Email" required>
-                            <input type="password" placeholder="Crea una contraseña" required>
-                            <button type="submit"><a href="home.html">Comenzar</a></button>
+                            <input type="email" placeholder="Dirección Email" id="email">
+                            <input type="password" placeholder="Crea una contraseña" id="password">
+                            <span id="spanMsg" class="noVisible">Falto algun dato</span>
+                            <button type="submit">Comenzar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <script src="./js/sign.js"></script>
 </body>
 
 </html>
