@@ -33,23 +33,25 @@
         <div class="row">
             <a href="index.html" id="regresar">&lt;</a>
             <div class="columna">
-                <form action="">
+                <form action="" id="formulario">
                     <img src="images/index/Logo.png" alt="">
                     <div class="usuario-caja">
-                        <input type="text" placeholder="Ingrese su usuario">
+                        <input id="user" type="text" placeholder="Ingrese su usuario">
                     </div>
 
                     <div class="contraseña-caja">
-                        <input type="password" placeholder="Ingrese su contraseña"> <br>
+                        <input id="password" type="password" placeholder="Ingrese su contraseña">
                     </div>
 
                     <div class="boton-caja">
-                        <button type="submit"><a href="home.html">Ingresar</a></button>
+                        <span id="spanMsg" class="noVisible">Falto nombre y/o contraseña</span>
+                        <button type="submit">Ingresar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <script src="js/logs.js"></script>
 </body>
 
 </html>
