@@ -378,7 +378,6 @@
   }
   
   /*MEDIA QUERIES*/
-  
   @media (max-width: 768px) {
     .notes__sidebar {
       width: 30%;
@@ -433,7 +432,7 @@
     }
   }
   
-  @media (max-width: 425px) {
+  @media (max-width: 425px), (max-height:425px){
     .notes {
       position: relative;
       flex-wrap: wrap;
@@ -524,5 +523,11 @@
     .admin-btn{
       font-size: 12px;
       padding: 0.75em;
+    }
+  }
+
+  @media (orientation:landscape) and (max-height:425px){
+    #app{
+      grid-template-columns: repeat(2 , 1fr);
     }
   }
