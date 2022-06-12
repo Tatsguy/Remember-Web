@@ -7,19 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Remember Team">
     <meta name="copyright" content="Remember">
-    <meta name="description" content="Interfaz de notas">
-    <meta name="keywords" content="Notas, Remember, Recordatorios">
+    <meta name="description" content="Interfaz de administración de usuarios">
+    <meta name="keywords" content="Administrador, notas, Remember">
     <link rel="shortcut icon" href="images/logoV.png" type="image/x-icon">
-    <title>Admin - Remember</title>
-    <link rel="stylesheet" href="css/home.css">
+    <title>Remember - Administrador</title>
+    <link rel="stylesheet" href="css/administrador.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="notes">
+
+        <!--SIDEBAR-------------------------------------------------->
         <div class="notes__sidebar">
             <div class="user">
                 <div class="user-avatar"></div>
+                <p id="user">Usuario</p>
+                <p id="email">Email</p>
             </div>
             <div class="tools">
                 <button class="closeIcon">
@@ -27,17 +31,17 @@
                 </button>
                 <div class="tool">
                     <a href="index.html"><i class="ri-home-line"></i>
-                        <p class="tool-name">Home</p>
+                        <p class="tool-name">Ir a inicio</p>
                     </a>
                 </div>
                 <div class="tool">
-                    <a href="#" id="about"><i class="ri-information-line"></i>
-                        <p class="tool-name">About Us</p>
+                    <a href="acerca-de.html" id="about"><i class="ri-information-line"></i>
+                        <p class="tool-name">Acerca de</p>
                     </a>
                 </div>
                 <div class="tool">
                     <a href="login.html"><i class="ri-door-open-line"></i>
-                        <p class="tool-name">Log Out</p>
+                        <p class="tool-name">Cerrar sesión</p>
                     </a>
                 </div>
             </div>
@@ -65,9 +69,10 @@
                 </div>
             </div>
         </div>
-        <div id="app-admin">
-            <h1>Welcome, Admin</h1>
 
+        <!--TABLAS---------------------------------------------------->
+        <div id="app-admin">
+            <h1>Bienvenido</h1>
             <div class="administrator">
                 <div class="table-container">
                     <h2>Usuarios</h2>

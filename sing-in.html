@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrarse - Remember</title>
-    <link rel="stylesheet" href="css/sign.css">
-    <link rel="shortcut icon" href="images/logoV.png" type="image/x-icon">
-    <meta name="author" content="Remember">
-    <meta name="copyright" content="Remember">
-    <meta name="description" content="Pantalla de inicio de la página de remember">
-    <meta name="keywords" content="Pantalla Inicio, Notas, Remember">
-</head>
+        <meta name="author" content="Remember">
+        <meta name="copyright" content="Remember">
+        <meta name="description" content="Pantalla de registrarse"> 
+        <meta name="keywords" content="sing-in, registrarse">
 
-<body>
-    <div class="fondo">
-        <div class="contenido">
-            <a id="back-button" href="index.html">&lt;</a>
-            <div class="imagen">
-                <img src="images/index/Logo.png" id="logo" alt="">
-            </div>
-            <div class="formulario" id="formulario-reg">
-                <form action="" class="flex-column" style="align-items: center;">
-                    <div id="form-container">
-                        <div class="flex-row">
-                            <input type="text" placeholder="Nombre(s)" id="name">
-                            <input type="text" placeholder="Apellido(s)" id="last-name">
+        <title>Remember - Registrarse</title>
+        <link rel="stylesheet" href="css/sign.css">
+        <link rel="shortcut icon" href="images/logoV.png" type="image/x-icon">
+    </head>
+    <body>
+
+        <!--REGISTRARSE-->
+        <div class="fondo">
+            <div class="contenido">
+                <a id="back-button" href="index.html">&lt;</a>
+                <div class="imagen">
+                    <img src="images/index/Logo.png" id="logo" alt="">
+                </div>
+                <div class="formulario">
+                    <form action="" class="flex-column" id="formulario">
+                        <div id="form-container">
+                            <div class="flex-row">
+                                <div class="textos">
+                                    <input type="text" placeholder="Nombre(s)" id="nombre"> 
+                                    <span class="noVisible" id="spanNombre">Ingrese su usuario</span>
+                                </div>
+                                
+                                <div class="textos">
+                                    <input type="text" placeholder="Apellido(s)" id="apellido">
+                                    <span class="noVisible" id="spanApellido">Ingrese su apellido</span>
+                                </div>
+                               
+                            </div>
+                          
+                            <div class="flex-column">
+                                <input type="email" placeholder="Dirección Email" id="email">
+                                <span class="noVisible" id="spanEmail">Ingrese su email</span>
+
+                                <input type="password" placeholder="Crea una contraseña" id="password">
+                                <span class="noVisible" id="spanPassword">Ingrese su contraseña</span>
+                                <button type="submit">Comenzar</button>
+                            </div>
                         </div>
-                        <div class="flex-column">
-                            <input type="email" placeholder="Dirección Email" id="email">
-                            <input type="password" placeholder="Crea una contraseña" id="password">
-                            <span id="spanMsg" class="noVisible">Falto algun dato</span>
-                            <button type="submit">Comenzar</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="./js/sign.js"></script>
-</body>
 
+    <script src="js/sign-in.js"></script>
+    </body>
 </html>

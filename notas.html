@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Remember">
+    <meta name="copyright" content="Remember">
+    <meta name="description" content="Interfaz de notas">
+    <meta name="keywords" content="Notas, Remember, Recordatorios">
+
+    <!--ESTILOS-->
+    <link rel="shortcut icon" href="images/logoV.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/notas.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Remember - Notas</title>
+
+</head>
+
+<body>
+
+    <div class="notes">
+
+        <!--SIDEBAR--------------------------------------------------------------->
+        <div class="notes__sidebar">
+            <div class="user">
+                <div class="user-avatar"></div>
+                <div id="nickname">
+                    <p id="user">Usuario</p>
+                    <p id="email">Email</p>
+                </div>
+            </div>
+            <div class="tools">
+                <button class="closeIcon">
+                    <i class="ri-close-line"></i>
+                </button>
+                <div class="tool">
+                    <a href="index.html"><i class="ri-home-line"></i>
+                        <p class="tool-name">Ir a inicio</p>
+                    </a>
+                </div>
+                <div class="tool">
+                    <a href="acerca-de.html" id="about"><i class="ri-information-line"></i>
+                        <p class="tool-name">Acerca de</p>
+                    </a>
+                </div>
+                <div class="tool">
+                    <a href="login.html"><i class="ri-door-open-line"></i>
+                        <p class="tool-name">Cerrar sesión</p>
+                    </a>
+                </div>
+            </div>
+            <button class="hamburger menuIcon">
+                <i class="ri-menu-line"></i>
+            </button>
+            <div class="widget">
+                <div class="fecha">
+                    <p id="diaSemana" class="diaSemana"></p>
+                    <p id="dia" class="dia"></p>
+                    <p>de </p>
+                    <p id="mes" class="mes"></p>
+                    <p>del </p>
+                    <p id="year" class="year"></p>
+                </div>
+                <div class="reloj">
+                    <p id="horas" class="horas"></p>
+                    <p>:</p>
+                    <p id="minutos" class="minutos"></p>
+                    <p>:</p>
+                    <div class="caja-segundos">
+                        <p class="ampm" id="ampm"></p>
+                        <p class="segundos" id="segundos"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--CREACIÓN DE NOTAS----------------------------------------------------->
+        <div id="app">
+            <button class="add-note" type="button">+</button>
+        </div>
+
+        <!--RELOJ---------------------------------------------------------------->
+        <div class="reminder-form-container container" id="reminder-form-container">
+            <div class="form-container-inner">
+                <form action="" class="form">
+                    <p id="instruction">Selecciona la fecha y hora</p>
+                    <input class="form-input" type="datetime-local">
+                    <button class="btn form-input" type="submit">
+                        Elegir
+                    </button>
+                </form>
+                <span class="form-note">Or press Esc to close</span>
+            </div>
+
+            <button class="btn form-close-btn place-items-center" id="form-close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+    </div>
+    <script src="js/notas.js"></script>
+    <script src="js/reloj.js"></script>
+</body>
+
+</html>
