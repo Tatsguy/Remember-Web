@@ -35,10 +35,10 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--blanco);
+  color: #05101a;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: row;
 }
 
@@ -55,8 +55,8 @@ a {
   flex-shrink: 0;
   padding: 1em;
   width: 300px;
-  background-color: #05101a;
-  color: #949ba1;
+  background-color: #ffff;
+  color: #05101a;
   display: flex;
   flex-direction: column;
 }
@@ -85,7 +85,7 @@ a {
 }
 
 .tools {
-  font-size: 30px;
+  font-size: 20px;
   margin: auto 0;
 }
 
@@ -104,7 +104,6 @@ a {
   display: none;
   font-size: 2rem;
   background: none;
-  color: var(--blanco);
 }
 
 .closeIcon {
@@ -150,7 +149,7 @@ a {
 }
 
 /*Estilos del pop-up*/
-.search-form-container {
+.reminder-form-container {
   width: 100%;
   max-width: 100%;
   height: 100vh;
@@ -223,6 +222,7 @@ a {
   gap: 24px;
   width: 100%;
   overflow-y: scroll;
+  background-color: lightblue;
 }
 
 .note-container{
@@ -310,11 +310,6 @@ a {
     height: 115px;
   }
 
-  .tools {
-    text-align: center;
-    font-size: 22px;
-  }
-
   .fecha {
     font-size: 0.9rem;
     margin-bottom: 5px;
@@ -348,6 +343,7 @@ a {
 
 @media (max-width: 425px) {
   .notes {
+    position: relative;
     flex-wrap: wrap;
     height: auto;
   }
@@ -358,6 +354,8 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 0.5em;
+    position: sticky;
+    top: 0;
   }
 
   .user-avatar {
@@ -390,8 +388,7 @@ a {
     right: 0;
     bottom: 0;
     z-index: 99;
-    background: black;
-    color: white;
+    background: white;
     list-style: none;
     padding-top: 4rem;
   }
@@ -407,7 +404,6 @@ a {
   .closeIcon{
     width: 100%;
     background: none;
-    color: white;
     font-size: 22px;
     border: none;
     padding: 15px 0;

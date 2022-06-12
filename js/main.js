@@ -84,6 +84,7 @@
   var intervalo = setInterval(actualizarHora, 1000);
 })();
 
+var searchForm = document.getElementById("reminder-form-container");
 //Hamburger Menu
 const menu = document.querySelector(".tools");
 const menuItems = document.querySelectorAll(".menuItem");
@@ -151,7 +152,6 @@ function createNoteElement(id, content, color, fondo) {
   caja.classList.add("funciones-nota");
   gotita.classList.add("icono-gotita");
   reloj.classList.add("icono-reloj");
-  reloj.id = "icono-reloj";
 
   gotita.append(gotitaImg);
   reloj.append(relojImg);
@@ -193,10 +193,12 @@ function createNoteElement(id, content, color, fondo) {
       element.style.color = "black";
       fondo="black";
     }
-
     element.style.backgroundColor = colorEscogido;
     noteContainer.style.backgroundColor = colorEscogido;
     updateColor(id,colorEscogido,fondo);
+  });
+  reloj.addEventListener("click", ()=>{
+    searchForm.classList.toggle("activated");
   });
   //Adjuntar los elemenetos dentro del note-container
   noteContainer.classList.add("note-container");
@@ -205,6 +207,11 @@ function createNoteElement(id, content, color, fondo) {
 
   return noteContainer;
 }
+
+var closeForm = document.getElementById("form-close-btn")
+closeForm.addEventListener("click", ()=>{
+  searchForm.classList.toggle("activated");
+});
 
 //Añade la nota
 function addNote() {
@@ -254,30 +261,3 @@ function cambiarColor() {
   var colorEscogido = colores[numeroRandom];
   return colorEscogido;
 }
-
-//Grab Elements
-const selectElement = (selector) => {
-  const element = document.querySelector(selector);
-  if (element) return element;
-  throw new Error(
-    `Something went wrong, make sure that ${selector} exists or is typed correctly`
-  );
-};
-
-//Open/Close search form popup
-const reminderToggle = document.querySelectorAll("#icono-reloj");
-const closeForm = selectElement("#form-close-btn");
-const searchForm = selectElement("#search-form-container");
-const toggleReminder = () => {
-  searchForm.classList.toggle("activated");
-};
-
-for(i of reminderToggle){
-  i.addEventListener("click", toggleReminder);
-}
-
-closeForm.addEventListener("click", toggleReminder);
-
-window.addEventListener("keyup", (event) => {
-  if (event.key === "Escape") searchForm.classList.remove("activated");
-});
