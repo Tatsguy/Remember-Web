@@ -209,7 +209,7 @@ a {
   cursor: pointer;
 }
 
-.search-form-container.activated {
+.reminder-form-container.activated {
   opacity: 1;
   transform: scale(1);
 }
@@ -218,7 +218,7 @@ a {
 #app{
   display: grid;
   grid-template-columns: repeat(3 , 1fr);
-  padding: 24px;
+  padding: 1em;
   gap: 24px;
   width: 100%;
   overflow-y: scroll;
@@ -264,7 +264,6 @@ a {
 }
 
 .note {
-  /*Pruebas*/
   width: 100%;
   height: 100%;
   border: none;
@@ -296,6 +295,86 @@ a {
 
 .blue{
   background-color: blue;
+}
+
+/*Tablas*/
+#app-admin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  background-color: lightblue;
+  overflow-y: scroll;
+}
+
+.administrator{
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.table-container{
+  margin: 10px 0;
+  width: 100%;
+}
+
+.content-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #0B243B;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #0B243B;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #0B243B;
+}
+
+.admin-tools{
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #05101a;
+}
+
+.admin-btn{
+  background: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  padding: 1.5em;
 }
 
 /*MEDIA QUERIES*/
@@ -332,6 +411,11 @@ a {
 
   :root {
     --note-height: 250px;
+  }
+
+  .table-scroll{
+    display: block;
+    overflow-x: scroll;
   }
 }
 
@@ -430,5 +514,10 @@ a {
 
   :root {
     --note-height: 300px;
+  }
+
+  .admin-btn{
+    font-size: 12px;
+    padding: 0.75em;
   }
 }

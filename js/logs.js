@@ -5,17 +5,25 @@ formulario.addEventListener("submit", (e) => {
   var nombre = document.getElementById("user").value;
   var password = document.getElementById("password").value;
 
+  //Validar campos llenos
   if (nombre == "" || password == "") {
+    //Hacer aparecer mensaje advertencia
     var spanNombre = document.getElementById("spanMsg");
     if (spanNombre.className == "noVisible") {
       spanNombre.classList.remove("noVisible");
       spanNombre.classList.add("siVisible");
     }
   } else {
-    window.location.assign("./home.html");
+    //Validar contraseña del admin
+    if(nombre == "UncleJoe" && password == "1234"){
+      window.location.assign("./admin.html");
+    }else{
+      window.location.assign("./home.html");
+    }
   }
 });
 
+//Borrar mensaje cuando se haga clic en un input
 var nombre = document.getElementById("user");
 var password = document.getElementById("password");
 nombre.addEventListener("click", () => {

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Remember Team">
+    <meta name="copyright" content="Remember">
+    <meta name="description" content="Interfaz de notas">
+    <meta name="keywords" content="Notas, Remember, Recordatorios">
+    <link rel="shortcut icon" href="images/logoV.png" type="image/x-icon">
+    <title>Admin - Remember</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="notes">
+        <div class="notes__sidebar">
+            <div class="user">
+                <div class="user-avatar"></div>
+            </div>
+            <div class="tools">
+                <button class="closeIcon">
+                    <i class="ri-close-line"></i>
+                </button>
+                <div class="tool">
+                    <a href="index.html"><i class="ri-home-line"></i>
+                        <p class="tool-name">Home</p>
+                    </a>
+                </div>
+                <div class="tool">
+                    <a href="#" id="about"><i class="ri-information-line"></i>
+                        <p class="tool-name">About Us</p>
+                    </a>
+                </div>
+                <div class="tool">
+                    <a href="login.html"><i class="ri-door-open-line"></i>
+                        <p class="tool-name">Log Out</p>
+                    </a>
+                </div>
+            </div>
+            <button class="hamburger menuIcon">
+                <i class="ri-menu-line"></i>
+            </button>
+            <div class="widget">
+                <div class="fecha">
+                    <p id="diaSemana" class="diaSemana"></p>
+                    <p id="dia" class="dia"></p>
+                    <p>de </p>
+                    <p id="mes" class="mes"></p>
+                    <p>del </p>
+                    <p id="year" class="year"></p>
+                </div>
+                <div class="reloj">
+                    <p id="horas" class="horas"></p>
+                    <p>:</p>
+                    <p id="minutos" class="minutos"></p>
+                    <p>:</p>
+                    <div class="caja-segundos">
+                        <p class="ampm" id="ampm"></p>
+                        <p class="segundos" id="segundos"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="app-admin">
+            <h1>Welcome, Admin</h1>
+
+            <div class="administrator">
+                <div class="table-container">
+                    <h2>Usuarios</h2>
+                    <div class="table-scroll">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>NOMBRE</th>
+                                    <th>APELLIDO</th>
+                                    <th>E-MAIL</th>
+                                    <th>USUARIO</th>
+                                    <th>CONTRASEÑA</th>
+                                    <th>ROLE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Joel</td>
+                                    <td>Nieto</td>
+                                    <td>nietoP@gmail.com</td>
+                                    <td>UncleJoe</td>
+                                    <td>*********</td>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr class="active-row">
+                                    <td>2</td>
+                                    <td>Eduardo</td>
+                                    <td>Gomez</td>
+                                    <td>eduGom@gmail.com</td>
+                                    <td>Musliños</td>
+                                    <td>*******</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Ibrahim</td>
+                                    <td>Montiel</td>
+                                    <td>cavalierMan@gmail.com</td>
+                                    <td>MirageClone</td>
+                                    <td>*********</td>
+                                    <td>User</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <h2>Notas</h2>
+                    <div class="table-scroll">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>CONTENIDO</th>
+                                    <th>FONDO</th>
+                                    <th>USER-ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>515121</td>
+                                    <td>El dia de hoy...</td>
+                                    <td>#FF8C32</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="active-row">
+                                    <td>151513</td>
+                                    <td>Hoy debo de h...</td>
+                                    <td>#9900F0</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>1561156</td>
+                                    <td>Mañana sera u...</td>
+                                    <td>#FFC600</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="active-row">
+                                    <td>157156</td>
+                                    <td>Comprar solo ...</td>
+                                    <td>#9900F0</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-tools">
+                <button class="admin-btn">Añadir Usuario</button>
+                <button class="admin-btn">Eliminar Usuario</button>
+                <button class="admin-btn">Modificar Usuario</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/reloj.js"></script>
+</body>
+
+</html>
