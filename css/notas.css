@@ -406,6 +406,7 @@
   
     #app{
       grid-template-columns: repeat(2 , 1fr);
+      overflow: hidden;
     }
   
     :root {
@@ -514,6 +515,7 @@
   
     #app{
       grid-template-columns: repeat(1 , 1fr);
+      overflow: hidden;
     }
   
     :root {
